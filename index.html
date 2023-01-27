@@ -1,5 +1,5 @@
-<DOCTYPE html>
-<html> lang="en">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>News article page</title>
         <style>
@@ -9,7 +9,7 @@
             aside,
             footer{
                 background: #659494;
-                border: radius 5px;
+                border-radius 5px;
                 color: white;
                 font-family: Arial, sans-serif;
                 font: size 30px;
@@ -30,6 +30,17 @@
             aside:after,
             footer:after{
                 content: '>';
+            }
+            article {
+                float:left;
+                margin: right 20px;
+                width: 60%
+            }
+            aside {
+                float: left
+                width:calc(40%-140px);
+            }
+            footer{clear:both;
             }
              </style>
         </head>
