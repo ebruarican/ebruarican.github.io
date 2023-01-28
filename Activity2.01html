@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<title>Video store home page</title>
+<style>
+header,
+nav,
+section,
+footer {
+    background:#659494;
+    border-radius: 5px;
+    color: white;
+    font-family: Arial,sans-serif;
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+header:before,
