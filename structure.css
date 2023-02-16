@@ -1,0 +1,8 @@
+*{
+    box-sizing: border-box;
+}
+ul,ol,dd{margin: 0;padding: 0;}
+
+/*
+mobile phone settings--<320px Defaults
+*/
