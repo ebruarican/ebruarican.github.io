@@ -15,6 +15,23 @@
         </form>
 
         <script>
+            function validateType(){
+                let inputType = document.getElementById("username");
+
+                let jsonuser = JSON.stringify( { "username": inputType.value});
+                let userValue = JSON.parse(jsonuser);
+
+                let outputDiv = document.getElementById("password");
+                outputDiv.innerText = userValue["username"];
+                
+                
+                }
+
+            var inputType = document.getElementById("username");
+            inputType.onblur = validateType;
+
+            
+
             
         </script>
     </body>
