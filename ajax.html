@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+        
+<form id="registration-form">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+  </div>
+  <button type="submit">Register</button>
+</form>
+
+<!-- JavaScript code for the registration form validation -->
+<script>
+  const form = document.querySelector('#registration-form');
+  const nameInput = document.querySelector('#name');
+  const usernameInput = document.querySelector('#username');
+  const passwordInput = document.querySelector('#password');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault(); // prevent the form from submitting
+    const name = nameInput.value.trim();
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value.trim();
+    const lowercaseRegex = /[a-z]/;
+    const uppercaseRegex = /[A-Z]/;
+    const digitRegex = /\d/;
+
+    if (password.length < 8) {
+      alert('Password must be at least 8 characters long.');
+      return;
+    }
+
+    if (password.toLowerCase().includes(username.toLowerCase())) {
+      alert('Password cannot contain the username.');
+      return;
+    }
+
+    if (!lowercaseRegex.test(password) || !uppercaseRegex.test(password) || !digitRegex.test(password)) {
+      alert('Password must contain at least one lowercase letter, one uppercase letter, and one digit.');
+      return;
+    }
+
+    // If the validation passes, submit the form data to the server.
+    // You can replace this code with your own implementation to send
+    // the data to your server using AJAX or fetch.
+    alert('Registration successful!');
+    form.reset(); // clear the form inputs
+  });
+  
+  
+
+        </script>
+    </body>
+</html>
